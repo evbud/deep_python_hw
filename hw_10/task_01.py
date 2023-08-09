@@ -29,4 +29,4 @@ if __name__ == '__main__':
     new_bird = AnimalFactory('bird', 'chaika', 1).create_animal()
     print(f'{new_bird.name}, {new_bird.show_specs()}')
     new_cat = AnimalFactory('cat', 'shinshila', 5).create_animal()
-    print(f'{new_cat.cat_name}, {new_cat.show_specs()}')
+    print(f'{new_cat.name}, {new_cat.show_specs()}')
