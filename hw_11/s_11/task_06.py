@@ -26,7 +26,7 @@ class Rectangle:
 
     def __add__(self, other):
         perimeter = self.calc_perimeter() + other.calc_perimeter()
-        width = self.width + other._width
+        width = self.width + other.width
         height = perimeter / 2 - width
         return Rectangle(width, height)
 
