@@ -46,8 +46,8 @@ class Cat(Animal):
     LONG = 5
     SHORT = 1
 
-    def __init__(self, cat_name: str, fur_length: float):
-        self.cat_name = cat_name
+    def __init__(self, name: str, fur_length: float):
+        super().__init__(name)
         self.fur_length = fur_length
 
     def show_specs(self):
