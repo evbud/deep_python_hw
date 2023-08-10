@@ -13,12 +13,20 @@ class Matrix:
         self.rows = len(self.matrix)
         self.columns = len(self.matrix[0])
 
+    def sum_elements(self):
+        """Нахождение суммы элементов матрицы"""
+        sum_el = 0
+        for i in range(self.rows):
+            for j in range(self.columns):
+                sum_el += self.matrix[i][j]
+        return sum_el
+
     def __str__(self):
         """Построчный вывод матрицы на печать"""
         print_matrix = ''
         for row in self.matrix:
             for element in row:
-                print_matrix += ''.join(f'{element}\t')
+                print_matrix += ''.join(f' {element}')
             print_matrix += ''.join('\n')
         return print_matrix
 
@@ -48,6 +56,9 @@ class Matrix:
             return Matrix(matrix_mult)
         else:
             return f'Перемножение невозможно, так как число столбцов матрицы A не равно числу строк B!'
+
+    def __repr__(self):
+        return f'Matrix({self.matrix})'
 
 
 if __name__ == '__main__':
